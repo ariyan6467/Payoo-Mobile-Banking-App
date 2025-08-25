@@ -12,7 +12,7 @@ loginBtn.addEventListener("click", function(dets){
     let fixedPinNum = 1132005 ;
 
     if(fixedMblNum == inputs[0].value && fixedPinNum == inputs[1].value){
-        window.location.href = "./another.html"
+        window.location.href = "./index2.html"
     }else{
         alert(`${inputs[0].value} or ${inputs[1].value} is wrong`)
     }
