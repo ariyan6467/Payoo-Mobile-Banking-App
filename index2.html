@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="style.css">
+    <!-- daisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+
+    <!-- FONT AWESOME CMD -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- tailwindcss CDN -->
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+<!-- FONT AWESOME CDN -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-[#cccdcf] h-full">
+
+
+  <!-- UPPERBODY PART -->
+
+
+    <div class=" bg-[#ffffff] shadow-2xl w-fit mx-auto rounded-b-3xl">
+        <div class="flex justify-between items-cente max-w-2xl mx-auto m-3.5    border-b-gray-500 ">
+        <div class="flex">
+            <img class="mx-1.5 w-[50px]" src="./assets/Group.png" alt="" srcset="">
+            <div>
+                <h3 class="font-bold">$ <span> 45000</span></h3>
+                <p class="opacity-60">Available Balance</p>
+            </div>
+        </div>
+        <div>
+            <button>
+                <button id="logeOutBtn" class="btn btn-lg opacity-60"> <i class="fa-solid fa-right-from-bracket rotate-180"></i>Loge Out</button>
+            </button>
+        </div>
+    </div>
+
+    <div class="max-w-2xl mx-auto space-y-2.5 p-3.5">
+        <h2 class="font-extrabold">🔥 Welcome to Payooo!</h2>
+        <p class="opacity-55">Enjoy easy and convenient financial services with us.<br> Cashout charge is low and </p>
+
+        <div class="grid grid-cols-3  gap-2.5">
+            <div id="addMoneyBtn" class="border-2 border-gray-300 flex flex-col justify-center items-center p-3.5 rounded-2xl  ">
+                <img class="w-[20px]" src="./assets/purse1.png" alt="" srcset="">
+                <h3 class="text-sm">Add money</h3>
+            </div>
+
+
+             <div id="withdrawMoney" class="border-2 border-gray-300 flex flex-col justify-center items-center p-3.5 rounded-2xl ">
+                <img class="w-[20px]" src="./assets/purse1.png" alt="" srcset="">
+                <h3 class="text-sm">Cash Out</h3>
+            </div>
+
+
+             <div id="transferMoneyBtn" class="border-2 border-gray-300 flex flex-col justify-center items-center p-3.5 rounded-2xl  ">
+                <img class="w-[20px]" src="./assets/purse1.png" alt="" srcset="">
+                <h3 class="text-sm">Transfer Money</h3>
+            </div>
+             <div id="getBonusBtn" class="border-2 border-gray-300 flex flex-col justify-center items-center p-3.5 rounded-2xl ">
+                <img class="w-[20px]" src="./assets/purse1.png" alt="" srcset="">
+                <h3 class="text-sm">Get Bonus</h3>
+            </div>
+             <div id="payBillBtn" class="border-2 border-gray-300 flex flex-col justify-center items-center p-3.5 rounded-2xl ">
+                <img class="w-[20px]" src="./assets/purse1.png" alt="" srcset="">
+                <h3 class="text-sm">Pay Bill</h3>
+            </div>
+             <div id="transactionBtn" class="border-2 border-gray-300 flex flex-col justify-center items-center p-3.5 rounded-2xl ">
+                <img class="w-[20px]" src="./assets/purse1.png" alt="" srcset="">
+                <h3 class="text-sm">Transactions</h3>
+            </div> 
+        </div>
+    </div>
+    </div>
+
+
+
+    <!-- ADD MONEY SECTION -->
+
+    
+    <div id="addMoneyForm" class=" hidden max-w-[400px] mx-auto  p-2.5 " >
+       <h2 class="font-bold ">Add Money</h2>
+       <div >
+         <form class="bg-[rgba(255, 255, 255, 1)] shadow-2xl p-3.5 rounded-2xl">
+            <div class="mb-2.5">
+                <fieldset class="fieldset">
+  <legend class="fieldset-legend">Select A Bank</legend>
+  <select class="select rounded-2xl border-none w-full">
+    <option disabled selected>Pick a browser</option>
+    <option>Chrome</option>
+    <option>FireFox</option>
+    <option>Safari</option>
+  </select>
+  
+</fieldset>
+            </div>
+            <div class="mb-2.5">
+                <label>Bank Acount Number</label>
+                <input type="text" placeholder="Enter 11 digit account number" class="input rounded-2xl w-full" />
+            </div>
+            <div class="mb-2.5">
+                <label>Amount to Add</label>
+                <input type="text" placeholder="Add Amount to withdraw" class="input rounded-2xl w-full" />
+            </div>
+            <div class="mb-2.5" >
+                <label>Pin Number</label>
+                <input type="text" placeholder="Enter 4 digit pin number " class="input rounded-2xl w-full" />
+            </div>
+
+            <button class="btn btn-primary w-full m-2.5 rounded-2xl " id="loginBtn">Login</button>
+
+         </form>
+       </div> 
+    </div>
+
+
+<!-- CASHOUT FORM -->
+
+    <div id="withdrawMoneyForm" class=" hidden max-w-[396px] mx-auto  p-2.5">
+       <h2 class="font-bold ">Cash Out</h2>
+       <div >
+         <form class="bg-[rgba(255, 255, 255, 1)] shadow-2xl p-3.5 rounded-2xl">
+            
+            <div  class="mb-2.5">
+                <label>Agent Number</label>
+                <input id="cashOutInputs" type="text" placeholder="Enter 11 digit account number" class="input rounded-2xl w-full" />
+            </div>
+            <div  class="mb-2.5">
+                <label>Amount </label>
+                <input id="cashOutInputs" type="text" placeholder="Enter amount to withdraw" class="input rounded-2xl w-full" />
+            </div>
+            <div  class="mb-2.5" >
+                <label>Pin Number</label>
+                <input id="cashOutInputs" type="text" placeholder="Enter 4 digit pin number " class="input rounded-2xl w-full" />
+            </div>
+
+            <button  class="btn btn-primary w-full m-2.5 rounded-2xl " id="withdrawMoneyBtn">withdraw Money</button>
+
+         </form>
+       </div> 
+    </div>
+
+<!-- TRANSACTION MONEY SECTION -->
+
+   <div id="transaction" class="max-w-[430px] mx-auto hidden">
+
+    <div class="flex justify-between p-5.5 ">
+        <h3 class="font-bold">Transaction History</h3>
+        <p class="opacity-55">View All</p>
+    </div>
+
+    <!-- CARD-1 -->
+    <!-- <div class="card lg:card-side bg-base-100 shadow-sm max-w-[430px] mx-auto h-[120px] rounded-3xl m-2.5 flex flex-row justify-center items-center shadow-2xl bg-[#e4d9d9]">
+  <figure class=" m-1.5 h-[70px] w-[70px] rounded-full bg-white">
+    <img class="  h-[50px] w-[50px] rounded-4xl"
+      src="assets/wallet1.png"
+      alt="Album" />
+  </figure>
+  <div class="card-body">
+    <h2 class="card-title">Electricity Bill</h2>
+    <p>Today 01:44 AM</p>
+   
+  </div>
+  <div class="p-3.5"> <i class="fa-solid fa-ellipsis-vertical"></i></div>
+</div> -->
+
+<!-- CARD-2 -->
+<!-- <div class="card lg:card-side bg-base-100 shadow-sm max-w-[430px] mx-auto h-[120px] rounded-3xl m-2.5 flex flex-row justify-center items-center shadow-2xl bg-[#e4d9d9]">
+  <figure class=" m-1.5 h-[70px] w-[70px] rounded-full bg-white">
+    <img class="  h-[50px] w-[50px] rounded-4xl"
+      src="assets/wallet1.png"
+      alt="Album" />
+  </figure>
+  <div class="card-body">
+    <h2 class="card-title">Mobile Recharge</h2>
+    <p>Today 01:44 AM</p>
+   
+  </div>
+  <div class="p-3.5"> <i class="fa-solid fa-ellipsis-vertical"></i></div>
+</div> -->
+
+
+  <!-- CARD-3 -->
+<!-- <div class="card lg:card-side bg-base-100 shadow-sm max-w-[430px] mx-auto h-[120px] rounded-3xl m-2.5 flex flex-row justify-center items-center shadow-2xl bg-[#e4d9d9]">
+  <figure class=" m-1.5 h-[70px] w-[70px] rounded-full bg-white">
+    <img class="  h-[50px] w-[50px] rounded-4xl"
+      src="assets/wallet1.png"
+      alt="Album" />
+  </figure>
+  <div class="card-body">
+    <h2 class="card-title">Mobile Recharge</h2>
+    <p>Today 01:44 AM</p>
+   
+  </div>
+  <div class="p-3.5"> <i class="fa-solid fa-ellipsis-vertical"></i></div>
+</div> -->
+
+
+   <!-- CARD-4 -->
+<!-- <div class="card lg:card-side bg-base-100 shadow-sm max-w-[430px] mx-auto h-[120px] rounded-3xl m-2.5 flex flex-row justify-center items-center shadow-2xl bg-[#e4d9d9]">
+  <figure class=" m-1.5 h-[70px] w-[70px] rounded-full bg-white">
+    <img class="  h-[50px] w-[50px] rounded-4xl"
+      src="assets/wallet1.png"
+      alt="Album" />
+  </figure>
+  <div class="card-body">
+    <h2 class="card-title">Mobile Recharge</h2>
+    <p>Today 01:44 AM</p>
+   
+  </div>
+  <div class="p-3.5"> <i class="fa-solid fa-ellipsis-vertical"></i></div>
+</div> -->
+
+
+
+</div>
+
+
+<!-- TRANSFER MONEY SECTION -->
+
+
+<div id="transferMoneyForm" class=" hidden  max-w-[396px] mx-auto  p-2.5">
+       <h2 class="font-bold ">Transfer Money</h2>
+       <div >
+         <form class="bg-[rgba(255, 255, 255, 1)] shadow-2xl p-3.5 rounded-2xl">
+            
+            <div  class="mb-2.5">
+                <label>User Account Number</label>
+                <input id="transferMoneyInputs" type="text" placeholder="Enter 11 digit account number" class="input rounded-2xl w-full" />
+            </div>
+            <div  class="mb-2.5">
+                <label>Amount </label>
+                <input id="transferMoneyInputs" type="text" placeholder="Enter amount to withdraw" class="input rounded-2xl w-full" />
+            </div>
+            <div  class="mb-2.5" >
+                <label>Pin Number</label>
+                <input id="transferMoneyInputs" type="text" placeholder="Enter 4 digit pin number " class="input rounded-2xl w-full" />
+            </div>
+
+            <button  class="btn btn-primary w-full m-2.5 rounded-2xl " id="sendMoneyBtn">Send Now</button>
+
+         </form>
+       </div> 
+    </div>
+
+
+    <!-- GET BONUS SECTION -->
+
+    <div id="getBonusForm" class=" hidden  max-w-[396px] mx-auto  p-2.5">
+       <h2 class="font-bold ">Get Bonus</h2>
+       <div >
+         <form class="bg-[rgba(255, 255, 255, 1)] shadow-2xl p-3.5 rounded-2xl">
+            
+            <div  class="mb-2.5" >
+                <label>Enter Bonus Coupon</label>
+                <input id="cashOutInputs" type="text" placeholder="Enter your coupon " class="input rounded-2xl w-full" />
+            </div>
+
+            <button  class="btn btn-primary w-full m-2.5 rounded-2xl " id="withdrawMoneyBtn">Get Bonus</button>
+
+         </form>
+       </div> 
+    </div>
+
+
+     <!-- PAY BILL SECTION -->
+
+     <div id="payBillForm" class=" hidden  max-w-[400px] mx-auto  p-2.5 " >
+       <h2 class="font-bold ">Pay Bill</h2>
+       <div >
+         <form class="bg-[rgba(255, 255, 255, 1)] shadow-2xl p-3.5 rounded-2xl">
+            <div class="mb-2.5">
+                <fieldset class="fieldset">
+  <legend class="fieldset-legend">Select To Pay</legend>
+  <select class="select rounded-2xl border-none w-full">
+    <option disabled selected >Select back</option>
+    <option>Chrome</option>
+    <option>FireFox</option>
+    <option>Safari</option>
+  </select>
+  
+</fieldset>
+            </div>
+            <div class="mb-2.5">
+                <label>Biller Account Number</label>
+                <input id="payBillInputs" type="text" placeholder="Enter 11 digit account number" class="input rounded-2xl w-full" />
+            </div>
+            <div class="mb-2.5">
+                <label>Amount to Add</label>
+                <input id="payBillInputs" type="text" placeholder="Add Amount to withdraw" class="input rounded-2xl w-full" />
+            </div>
+            <div class="mb-2.5" >
+                <label>Pin Number</label>
+                <input id="payBillInputs" type="text" placeholder="Enter 4 digit pin number " class="input rounded-2xl w-full" />
+            </div>
+
+            <button class="btn btn-primary w-full m-2.5 rounded-2xl " id="payNowBtn">Pay Now</button>
+
+         </form>
+       </div> 
+    </div>
+
+    <script src="another.js"></script>
+</body>
+</html>
